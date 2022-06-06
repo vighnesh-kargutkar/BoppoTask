@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+#index{
+    width: 300px;
+    margin: auto;
+    padding: 40px;
+    margin-top: 300px;
+    background-color:#dfe3ee;
+}
+#index a {
+    font-size: x-large;
+    display: block;
+    color: #3b5998;
+    text-align: center;
+    text-decoration: none;
+}
+#regs,#login{
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 40px;
+    color: 	#3b5998;
+    background-color: #dfe3ee;
+    /* background-color: #7289da; */
+}
+#regs input[type="text"],input[type="password"],input[type="email"],#type
+,option[type="User"],option[type="none"],option[type="Employee"]
+{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #3b5998;
+    border-radius: 15px; 
+    margin-top: 10px;
+    outline: none;
+    font-size:large;
+    color: #3b5998;
+}
+button{
+    padding: 10px;
+    border: 1px solid #3b5998;
+    border-radius: 15px; 
+    margin-top: 10px;
+    font-size:large;
+    color: #3b5998;
+    background-color: #dfe3ee;
+}
+button:hover {
+    background-color: #3b5998;
+    color: #dfe3ee;
+}
+#home{
+    background-color: #dfe3ee;
+    color: #3b5998;
+    padding: 20px;
+    text-align: center;
+}
+table{
+    width: 60%;
+    margin: auto;
+    background-color: #dfe3ee;
+    color: #3b5998;
+}
+tr{
+    font-size: larger;
+}
+th{
+    font-weight: bold;
+    font-size: larger;
+}
+td{
+    font-size: larger;
+    text-align: center;
+}
+tr:hover {
+    /* background-color: #3b5998; */
+    color: darkblue;
+}

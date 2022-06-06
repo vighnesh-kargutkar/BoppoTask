@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Registration</title>
+</head>
+<body>
+    <div id="regs">
+        <h1>Registration</h1>
+        <form action="/registration" method="post">
+            <% if(typeof alert != 'undefined') { %>
+                <%alert.forEach(function(error) { %>
+                <h3 style="color: red; font-weight: lighter">
+                  <% if(error.param=="fname"){ %> <%= error.msg %><%}%>
+                </h3>
+                <% }) %> <% } %> 
+                <input type="text" name="fname" placeholder="Firstname">
+
+                <% if(typeof alert != 'undefined') { %>
+                <%alert.forEach(function(error) { %>
+                <h3 style="color: red; font-weight: lighter">
+                  <% if(error.param=="lname"){ %> <%= error.msg %><%}%>
+                </h3>
+                <% }) %> <% } %>
+            <input type="text" name="lname" placeholder="Laast name">
+
+            <% if(typeof alert != 'undefined') { %>
+                <%alert.forEach(function(error) { %>
+                <h3 style="color: red; font-weight: lighter">
+                  <% if(error.param=="email"){ %> <%= error.msg %><%}%>
+                </h3>
+                <% }) %> <% } %>
+            <input type="email" name="email" placeholder="email">
+            <% if(typeof alert != 'undefined') { %>
+                <%alert.forEach(function(error) { %>
+                <h3 style="color: red; font-weight: lighter">
+                  <% if(error.param=="password"){ %> <%= error.msg %><%}%>
+                </h3>
+                <% }) %> <% } %>
+            <input type="password" name="password" placeholder="password">
+
+            <% if(typeof alert != 'undefined') { %>
+                <%alert.forEach(function(error) { %>
+                <h3 style="color: red; font-weight: lighter">
+                  <% if(error.param=="cnpassword"){ %> <%= error.msg %><%}%>
+                </h3>
+                <% }) %> <% } %>
+            <input type="password" name="cnpassword" placeholder="confirm password">
+
+            <% if(typeof alert != 'undefined') { %>
+                <%alert.forEach(function(error) { %>
+                <h3 style="color: red; font-weight: lighter">
+                  <% if(error.param=="org"){ %> <%= error.msg %><%}%>
+                </h3>
+                <% }) %> <% } %>
+            <input type="text" name="org" placeholder="organization name">
+
+            <% if(typeof alert != 'undefined') { %>
+                <%alert.forEach(function(error) { %>
+                <h3 style="color: red; font-weight: lighter">
+                  <% if(error.param=="type"){ %> <%= error.msg %><%}%>
+                </h3>
+                <% }) %> <% } %>
+            <select id="type" name="type">
+                <option type="none"></option>
+                <option type="User">User</option>
+                <option typr="Employee">Employee</option>
+              </select>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

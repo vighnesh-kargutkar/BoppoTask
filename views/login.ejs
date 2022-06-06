@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Login</title>
+</head>
+<body>
+    <div id="login">
+        <h1>Login</h1>
+        <form action="/login" method="post">
+            <% if(typeof alert != 'undefined') { %>
+                <%alert.forEach(function(error) { %>
+                <h3 style="color: red; font-weight: lighter">
+                  <% if(error.param=="email"){ %> <%= error.msg %><%}%>
+                </h3>
+                <% }) %> <% } %>
+            <input type="email" name="email" id="" placeholder="Email">
+            <% if(typeof alert != 'undefined') { %>
+                <%alert.forEach(function(error) { %>
+                <h3 style="color: red; font-weight: lighter">
+                  <% if(error.param=="password"){ %> <%= error.msg %><%}%>
+                </h3>
+                <% }) %> <% } %>
+            <input type="password" name="password" id="" placeholder="Password">
+            <% if(typeof alert != 'undefined') { %>
+                <%alert.forEach(function(error) { %>
+                <h3 style="color: red; font-weight: lighter">
+                  <% if(error.param=="type"){ %> <%= error.msg %><%}%>
+                </h3>
+                <% }) %> <% } %>
+            <select id="type" name="type">
+                <option></option>
+                <option type="User">User</option>
+                <option typr="Employee">Employee</option>
+              </select>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

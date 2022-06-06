@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>employee</title>
+    <style>
+        *{
+            background-color: #dfe3ee;
+        }
+    </style>
+</head>
+<body>
+    <div id="home">
+        <h1>Employee data</h1>
+        <br>
+        <div>
+            <h2>Collection sorted by Firstname</h2><br>
+            <table>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Organiztion name</th>
+                    <th>Id</th>
+                </tr>
+                <% fn.forEach(function(dat){ %>
+                    <tr>
+                      <td><%= dat.Firstname %></td>
+                      <td><%= dat.Lastname %></td>
+                      <td><%= dat.Email %></td>
+                      <td><%= dat.Orgname %></td>
+                      <td><%= dat._id %></td>
+                    </tr>
+                      <% })%>
+            </table><br><br><br><br>
+            <h2>Collection sorted by Lastname</h2><br>
+            <table>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Organiztion name</th>
+                    <th>Id</th>
+                </tr>
+                <% ln.forEach(function(dat){ %>
+                    <tr>
+                      <td><%= dat.Firstname %></td>
+                      <td><%= dat.Lastname %></td>
+                      <td><%= dat.Email %></td>
+                      <td><%= dat.Orgname %></td>
+                      <td><%= dat._id %></td>
+                    </tr>
+                      <% })%>
+                    </table><br><br><br><br>
+            <h2>Collection sorted by Email</h2><br>
+
+            <table>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Organiztion name</th>
+                    <th>Id</th>
+                </tr>
+                <% em.forEach(function(dat){ %>
+                    <tr>
+                      <td><%= dat.Firstname %></td>
+                      <td><%= dat.Lastname %></td>
+                      <td><%= dat.Email %></td>
+                      <td><%= dat.Orgname %></td>
+                      <td><%= dat._id %></td>
+                    </tr>
+                      <% })%>
+                    </table><br><br><br><br>
+            <h2>Collection sorted by Organization</h2><br>
+            <table>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Organiztion name</th>
+                    <th>Id</th>
+                </tr>
+                <% org.forEach(function(dat){ %>
+                    <tr>
+                      <td><%= dat.Firstname %></td>
+                      <td><%= dat.Lastname %></td>
+                      <td><%= dat.Email %></td>
+                      <td><%= dat.Orgname %></td>
+                      <td><%= dat._id %></td>
+                    </tr>
+                      <% })%>
+                    </table><br><br><br><br>
+            <h2>Collection sorted by Id</h2><br>
+            <table>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Organiztion name</th>
+                    <th>Id</th>
+                </tr>
+                <% id.forEach(function(dat){ %>
+                    <tr>
+                      <td><%= dat.Firstname %></td>
+                      <td><%= dat.Lastname %></td>
+                      <td><%= dat.Email %></td>
+                      <td><%= dat.Orgname %></td>
+                      <td><%= dat._id %></td>
+                    </tr>
+                      <% })%>
+                    </table><br><br><br><br>
+        </div>
+    </div>
+</body>
+</html>
